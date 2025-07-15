@@ -50,11 +50,8 @@ pip install praw huggingface_hub
    - Replace the placeholder values in the Reddit API setup section:
 
      ```python
-     reddit = praw.Reddit(
-         client_id="YOUR_CLIENT_ID",
-         client_secret="YOUR_CLIENT_SECRET",
-         user_agent="UserPersonaScraper"
-     )
+     os.environ['REDDIT_CLIENT_ID'] = "Your_Client_Id"
+     os.environ['REDDIT_CLIENT_SECRET'] = "Your_Client_Secret"
      ```
 
    - Insert your `client_id` and `client_secret` from Reddit.
@@ -74,10 +71,7 @@ pip install praw huggingface_hub
    - Replace the placeholder API key in the Hugging Face setup section:
 
      ```python
-     client = InferenceClient(
-         provider="auto",
-         api_key="YOUR_HF_API_KEY"
-     )
+     os.environ['HUGGINGFACE_API_KEY'] = "Your_Api_Key"
      ```
 
    - Insert your Hugging Face API key.
